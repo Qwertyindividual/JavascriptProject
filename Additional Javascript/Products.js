@@ -119,25 +119,26 @@ function displayProducts(){
             console.log(`${item}: ${item}`);
             body.innerHTML +=
             `
-            <div class="col">
+       <div class="col">
             <div class="card mb-3" style="max-width: 540px;">
             <div class="row g-0">
               <div class="col-md-4">
-                <img src="${item.image}" class="img-fluid rounded-start" alt="...">
+                <img src="${item.image}" class="img-fluid rounded-start h-100" alt="...">
               </div>
               <div class="col-md-8">
-                <div class="card-body">
+                <div class="card-body border border-4 border border-danger border-opacity-50">
                   <h5 class="card-title">${item.product}</h5>
                   <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                  <button class="checkout" onclick='addToCheckout(${JSON.stringify(item)})'>Add to checkout</button>
+                  <button class="checkout rounded-pill p-2" onclick='addToCheckout(${JSON.stringify(item)})'>Add to checkout</button>
                   <p class="card-text">Price: R${item.price}</p>
                 </div>
               </div>
             </div>
           </div>
         </div>  
-        `
-        }
+        `       
+          
+        } 
     })
 }
 

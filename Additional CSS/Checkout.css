@@ -1,3 +1,9 @@
 body {
     background-image: url(../Img/4.v1\ \(1\).png);
+   
+}
+
+#admin_img {
+    width: 10rem;
+    box-shadow: 2.5px 5px rgba(0, 0, 0, 0.7);    
 }

@@ -1,3 +1,8 @@
 body {
     background-image: url(../Img/resin3.v1\ \(2\).png);
 }
+
+#admin_img {
+    width: 10rem;
+    box-shadow: 2.5px 5px rgba(0, 0, 0, 0.7);    
+}
