@@ -1,11 +1,9 @@
-let products;
-if (localStorage.getItem("products")) {
-    products = localStorage.getItem("products")
-} else {
-    products = [
+let products = JSON.parse(localStorage.getItem("products")) ?
+    JSON.parse(localStorage.getItem("products")):
+    [
         {
            id: 1,
-           product: "Necklace",
+           product: "Necklaceee",
            price: 1500.00,
            image: "https://i.postimg.cc/hvR3fhz6/necklace-1.jpg"
        },
@@ -99,16 +97,10 @@ if (localStorage.getItem("products")) {
            price: 280.00,
            image: "https://i.postimg.cc/N05gxCJY/earngs-3.jpg"
        },
-       {
-           id: 17,
-           product: "Resin Earings",
-           price: 370.00,
-           image: "https://i.postimg.cc/xdCd41dw/earings2.jpg"
-       },
    ]
    
    localStorage.setItem('products', JSON.stringify(products))
-   }
+
    function displayProducts(){
     products = JSON.parse(localStorage.getItem('products'))
 
@@ -133,3 +125,18 @@ if (localStorage.getItem("products")) {
 displayProducts()
 
 localStorage.setItem('products', JSON.stringify(products));
+
+// let x = JSON.parse(localStorage.getItem('myCheckout'));
+// let y = document.querySelector('#tableBody');
+// x.forEach(element => {
+//     console.log(element);
+//     y.innerHTML += `
+//         <tr>
+//             <td>${element.id}</td>
+//             <td>${element.name}</td>
+//             <td>${element.genre}</td>
+//             <td>${element.price}</td>
+//             <td></td>
+//         </tr>
+//     `
+// });
